@@ -1,0 +1,70 @@
+<html>
+ <script type="text/javascript">
+$(function(){
+   $('.carousel').carousel();
+   interval: 2000
+   pause: 'hover'
+
+  
+
+});
+
+   
+
+</script>
+
+<body>
+
+          <div id="myCarousel" class="carousel" align="center">
+    <div class="carousel slide"> 
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <?php
+for ($i=0; $i < count($files) ; $i++) {
+if ($i==0) {
+$active= " active";
+}else{
+$active='';
+}
+
+?> 
+    <div class="active item">
+      <%= link_to image_tag("test1.jpg", alt: "Rails"), '' %> 
+    <div class="carousel-caption">
+                <h4>SM MegaMall</h4>
+                <p>3 Days Sale! May 25-27</p> 
+                </div>  
+              </div>
+
+    <div class="item">
+      <%= link_to image_tag("test2.jpg", alt: "Rails"), '' %> 
+      <div class="carousel-caption">
+                <h4>Shangri la Plaza</h4>
+                <p>3 Days Sale! June 1-3</p> 
+              </div>  
+          </div>
+    <div class="item">
+      <%= link_to image_tag("test3.jpg", alt: "Rails"), '' %> 
+      <div class="carousel-caption">
+                <h4>Robinson Galleria</h4>
+                <p>3 Days Sale! May 25-27</p> 
+          </div>  
+        </div>  
+  </div>
+    </div>
+
+<?php
+}
+
+?> 
+
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
+
+
+</body>
+</html>
+
+   <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
