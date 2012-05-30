@@ -17,7 +17,7 @@
     <div class="container">
       <%= link_to "megasales", root_path, id: "logo" %>
       <nav>
-        <ul class="nav pull-right">
+        <ul class="nav pull-left">
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Help", help_path %></li>
           <% if signed_in? %>
@@ -39,6 +39,10 @@
             <li><%= link_to "Sign in", signin_path %></li>
           <% end %>
         </ul>
+          <form class="navbar-search pull-right">
+    <input type="text" class="search-query" placeholder="Search">
+    </form>
+
       </nav>
     </div>
   </div>

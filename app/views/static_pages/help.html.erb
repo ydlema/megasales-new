@@ -1,5 +1,74 @@
-<% provide(:title, 'Help') %>
-<h1>Help</h1>
-<p>
 
-</p>
+<% provide(:title, 'Help') %>
+
+<html>
+<h1>Comments</h1>
+<%= stylesheet_link_tag "try"%>
+
+<head>
+<meta property="fb:admins" content="www.facebook.com/meldytah"/>
+</head>
+
+
+
+ <script type="text/javascript">
+$(function(){
+        $('#myModal').modal({
+    keyboard: true
+    })
+
+     $('#myModal').modal('show')
+    $('#myModal').modal('toggle')
+    $('#myModal').modal('hide')
+  
+
+});
+
+   
+
+</script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+<body>
+    <a class="btn" data-toggle="modal" href="#myModal" >Sign In</a>
+
+    <div class="modal" id="myModal">
+    <div class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>Comment</h3>
+    </div>
+    <div class="modal-body">
+    <p>
+         <form class="row-fluid">
+            
+        <input type="text" class="span12" placeholder="Enter your comment">
+            </form>
+
+    </p>
+    </div>
+    <div class="modal-footer">
+    <a href="#" class="btn">Close</a>
+    <a href="#" class="btn btn-primary">Comment</a>
+    </div>
+    </div>
+
+<fb:comments-count href=http://www.facebook.com/megasales.ph?skip_nax_wizard=true></fb:comments-count> awesome comments
+<div class="fb-comments" data-href="http://www.facebook.com/megasales.ph?skip_nax_wizard=true" data-num-posts="3" data-width="500"> 
+
+
+</div>
+
+</body>
+
+</html>
